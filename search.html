@@ -1,0 +1,66 @@
+<html>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <div class="container mt-5">
+      <div class="hide" id="found">
+    <div class="row">
+        <div class="col-lg-12 text-center mt_custom">
+            <h2 class="font-weight-bold">Congratulation! Get your Pokemon!</h2>
+
+            <h4 class="font-weight-bold mt-5" id="name"></h4>
+
+            <h4 class="font-weight-bold mt-5" >These are <span id="abilities"></span> abilities</h4>
+           <ul id="abilities_pokemon">
+
+           </ul>
+           
+        </div>
+        
+    </div>
+    <div class="row text-center">
+       <div class="col-lg-6 mx-auto">
+          <div id="img">
+          </div>
+          <br>
+       </div>
+    </div>
+</div>
+<div class="hide" id="not-found">
+    <div class="col-lg-12 text-center mt_custom">
+        <h2 class="font-weight-bold" id="name2"></h2>
+  </div>
+</div>
+</div>
+<script>
+$.ajax({
+        "url": "https://pokeapi.co/api/v2/pokemon/"+localStorage.getItem("pokemon"),
+        "method": "GET",
+        success: function(data,status,xhr){
+            document.getElementById("found").classList.remove("hide")
+            document.getElementById("name").innerText = localStorage.getItem("pokemon")
+            document.getElementById("abilities").innerText = localStorage.getItem("pokemon")
+            data.abilities.forEach(element => {
+                $("#abilities_pokemon").append("<li class=mr-5>"+element.ability.name+"</li>")
+            });
+          $("#img").append("<img class=w-100 src="+data.sprites.front_default+" /> ")
+          $("#img").append("<button class='btn btn-outline-primary btn-lg' onclick=window.location.href='./index.html'>Back to HomePage</button>")
+        },
+        error: function(xhr, status, error){
+            document.getElementById("not-found").classList.remove("hide")
+            document.getElementById("name2").innerText = localStorage.getItem("pokemon") +"is not a valid Pokemon!"
+
+        },
+
+})
+
+</script>
+</body>
+
+</html>

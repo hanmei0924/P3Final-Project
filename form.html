@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pokemon</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+  <div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-12 text-center mt_custom">
+            <h2 class="font-weight-bold">Set a new focusing goal!</h2>
+            <form class="mt-3" action="javascript:void(0);" onsubmit="form_submit()">
+                <div class="form-group">
+                  <label for="exampleInputEmail1" class="font-weight-bold">Input your Goal:</label>
+                  <input type="text" class="form-control" id="goal"  placeholder="Input your Goal" autofocus required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1" class="font-weight-bold">Input your Mission time:</label>
+                  <input type="text" class="form-control" id="mission" placeholder="Input your Mission time" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class="font-weight-bold">Input your reward Pokemon Name:</label>
+                    <input type="text" class="form-control" id="pokemon" placeholder="Input your reward Pokemon Name" required>
+                  </div>
+                <button type="submit" class="btn btn-primary btn-lg mt-3">Submit</button>
+              </form>
+   
+        </div>
+</div>
+</div>
+<script>
+    function form_submit(){
+        localStorage.setItem("goal",document.getElementById("goal").value)
+        localStorage.setItem("mission",document.getElementById("mission").value)
+        localStorage.setItem("pokemon",document.getElementById("pokemon").value)
+        window.location.href="./form_final.html"
+    }
+</script>
+ <body>
+
+ </body>
+</html>

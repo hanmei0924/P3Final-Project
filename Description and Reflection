@@ -1,0 +1,17 @@
+
+Description and Reflection
+
+I changed a little from my original proposal, which is using JavaScript instead of Python. As this one didn't store any data, I don't need to use Python here. All data comes from the form and passing to that api, which is just stored temporarily using "localStorage."
+
+The Javascript front end is composed of 4 parts:
+1 homepage(index.html): which creates a root page containing set a new goal button. Once clicked, you are redirected to the goal-setting page.
+2 Goal setting page（form.html）: input the goal title, mission time, and expecting Pokemon name. It contains the submit button.
+3 Don't give up page（form_final.html ）: It contains the finished button and your goal. Once you finished your goal, click the finish button and be redirected to the congratulation page.
+4 Congratulation page (search.html): It will show you the pokemon you input at a goal setting page and displays the name, abilities, and sprite in a pleasing manner.
+
+
+The primary function is the Ajax function on search.html to call the api. Includes:
+1 Passing the name from the previous page to this one
+2 iterating the loop of abilities and printing on the front end
+3 Using the image from the api.
+

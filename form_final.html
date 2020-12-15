@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pokemon</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+  <div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-12 text-center mt_custom">
+            <h2 class="font-weight-bold">Don't give up!</h2>
+             <div class="mt-3">
+                   <div class="d-inline-flex">
+                  <h4 class="font-weight-bold">Your Goal:</h4>
+                   <h4 class="ml-2 text-green" id="goal"></h4>
+                </div>
+                <br>
+                <div class="d-inline-flex">
+                    <h4 class="font-weight-bold">Your Mission Time:</h4>
+                    <h4 class="ml-2 text-green" id="mission"></h4>
+                 </div>
+                 <br>
+                 <div class="d-inline-flex">
+                    <h4 class="font-weight-bold">Your reward Pokemon:</h4>
+                    <h4 class="ml-2 text-green" id="pokemon"></h4>
+                 </div>
+             </div>
+        </div>
+        <div class="col-lg-6 mt-3 text-right">
+               <button class="btn btn-outline-secondary btn-lg" onclick="window.location.href='./index.html'">Back to HomePage</button>
+        </div>
+        <div class="col-lg-2 text-right mt-3">
+            <button class="btn btn-outline-primary btn-lg" onclick="window.location.href='./search.html'">Finished</button>
+        </div>
+</div>
+</div>
+<script>
+    document.getElementById("goal").innerText = localStorage.getItem("goal")
+    document.getElementById("mission").innerText = localStorage.getItem("mission")
+    document.getElementById("pokemon").innerText = localStorage.getItem("pokemon")
+
+</script>
+ <body>
+
+ </body>
+</html>
