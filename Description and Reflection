@@ -3,6 +3,15 @@ Description and Reflection
 
 I changed a little from my original proposal, which is using JavaScript instead of Python. As this one didn't store any data, I don't need to use Python here. All data comes from the form and passing to that api, which is just stored temporarily using "localStorage."
 
+In this project, I will build a responsive HTML package setting a focusing goal and showing how long time you keep focusing and rewards you a visible pokemon you chose. This tool may be of interest to multiple audiences:
+1. Students or employees who work remotely and have trouble keeping
+focusing at home.
+2. People who have phone addiction, digital devices addiction, or can't concentrate on single work on the virtual platform.
+3. People who want to build a good habit of focusing and a pokemon lover.
+
+My project will mainly use data from pokemon API( https://pokeapi.co/ ).
+This website provides a restful API interface to highly complex objects built from thousands of lines of data related to Pokémon. Using this website, I can consume information on Pokémon images, abilities, and types.
+
 The Javascript front end is composed of 4 parts:
 1 homepage(index.html): which creates a root page containing set a new goal button. Once clicked, you are redirected to the goal-setting page.
 2 Goal setting page（form.html）: input the goal title, mission time, and expecting Pokemon name. It contains the submit button.
